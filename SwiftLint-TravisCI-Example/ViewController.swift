@@ -11,15 +11,15 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var showColorButton: UIButton!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        showColorButton.addTarget(self, action: "showAnotherColor:", forControlEvents: .TouchUpInside)
+        showColorButton.addTarget(self, action: "showAnotherColor:",
+            forControlEvents: .TouchUpInside)
     }
-    
+
     func showAnotherColor(sender: UIButton) {
         view.backgroundColor = UIColor.randomColor
     }
 
 }
-

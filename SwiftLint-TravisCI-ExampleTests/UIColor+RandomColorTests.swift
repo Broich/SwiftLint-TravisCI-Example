@@ -8,11 +8,11 @@
 
 import XCTest
 
-class UIColor_RandomColorTests: XCTestCase {
+class UIColorRandomColorTests: XCTestCase {
 
     func testGeneratesRandomUIColors() {
         var generatedColors = [UIColor]()
-        
+
         for _ in 1...10 {
             let color = UIColor.randomColor
             XCTAssert(!generatedColors.contains(color))
