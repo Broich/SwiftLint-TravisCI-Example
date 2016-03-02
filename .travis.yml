@@ -1,6 +1,10 @@
 language: objective-c
 osx_image: xcode7.2
 
+install:
+  - ./install_swiftlint.sh
+
 script:
-  xctool test -project SwiftLint-TravisCI-Example.xcodeproj -scheme SwiftLint-TravisCI-Example -sdk iphonesimulator
+  - swiftlint
+  - xctool test -project SwiftLint-TravisCI-Example.xcodeproj -scheme SwiftLint-TravisCI-Example -sdk iphonesimulator
 
